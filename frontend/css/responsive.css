@@ -1,0 +1,248 @@
+/* Responsive Design */
+
+/* ========== Tablets (768px and below) ========== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .navbar-container {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .navbar-status {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .result-container {
+    padding: 1.5rem;
+  }
+
+  .result-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .result-text {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== Mobile (480px and below) ========== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .navbar-container {
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .navbar-logo {
+    font-size: 1rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .navbar-links {
+    gap: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-link {
+    padding: 0.3rem 0.5rem;
+  }
+
+  .navbar-status {
+    font-size: 0.75rem;
+  }
+
+  .hero-section {
+    padding: 1.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-large {
+    padding: 0.8rem 1rem;
+  }
+
+  .form {
+    padding: 1rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.6rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .checkbox-group {
+    gap: 0.5rem;
+  }
+
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
+
+  .result-container {
+    padding: 1rem;
+  }
+
+  .result-section {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .result-list li {
+    padding: 0.75rem;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .result-text {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .result-subsection {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .loading-spinner {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .error-message {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    margin: 0 1rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ========== Small Mobile (max-width: 320px) ========== */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .result-list li {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ========== Large Screens (1200px and above) ========== */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-section {
+    padding: 5rem 3rem;
+  }
+}

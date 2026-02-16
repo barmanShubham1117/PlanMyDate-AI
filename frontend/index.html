@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlanMyDate AI - AI Powered Date Planning</title>
+  
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar"></nav>
+
+  <!-- Main Container -->
+  <div id="app-container">
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading-spinner hidden">
+      <div class="spinner"></div>
+      <p>Generating your plan...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error-message" class="error-message hidden"></div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page">
+      <div class="container">
+        <header class="hero-section">
+          <h1>💕 PlanMyDate AI</h1>
+          <p class="subtitle">AI-Powered Date Planning for Every Occasion</p>
+          <p class="tagline">Plan the perfect date in seconds, powered by artificial intelligence</p>
+        </header>
+
+        <div class="features-grid">
+          <div class="feature-card" onclick="goToPage('couple-mode')">
+            <div class="feature-icon">👫</div>
+            <h3>Couple Mode</h3>
+            <p>Plan romantic, fun, casual, or adventurous dates for two</p>
+            <button class="btn btn-primary">Start Planning</button>
+          </div>
+
+          <div class="feature-card" onclick="goToPage('solo-mode')">
+            <div class="feature-icon">🎯</div>
+            <h3>Solo Mode</h3>
+            <p>Discover self-care activities and meet like-minded people</p>
+            <button class="btn btn-primary">Explore Solo</button>
+          </div>
+        </div>
+
+        <div class="info-section">
+          <h2>How It Works</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h4>Tell Us About You</h4>
+              <p>Share your preferences, budget, and mood</p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h4>AI Magic</h4>
+              <p>Our AI crafts a detailed, personalized plan</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h4>Get Results</h4>
+              <p>Receive itinerary, tips, and conversation starters</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Couple Mode Page -->
+    <div id="couple-mode" class="page hidden">
+      <div class="container">
+        <button class="btn-back" onclick="goToPage('home')">← Back</button>
+        <h2>Plan Your Couple Date</h2>
+        <form id="couple-form" class="form">
+          <div class="form-group">
+            <label for="couple-city">City</label>
+            <input type="text" id="couple-city" placeholder="e.g., New York, Paris, Tokyo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="couple-budget">Budget ($)</label>
+            <input type="number" id="couple-budget" placeholder="e.g., 100" min="10" required />
+          </div>
+
+          <div class="form-group">
+            <label for="couple-type">Date Type</label>
+            <select id="couple-type" required>
+              <option value="">Select a date type</option>
+              <option value="romantic">💕 Romantic</option>
+              <option value="fun">🎉 Fun</option>
+              <option value="casual">😊 Casual</option>
+              <option value="adventure">🧗 Adventure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="couple-personality">Partner's Personality</label>
+            <select id="couple-personality" required>
+              <option value="">Select personality type</option>
+              <option value="introvert">🤐 Introvert</option>
+              <option value="foodie">🍽️ Foodie</option>
+              <option value="filmy">🎬 Movie Buff</option>
+              <option value="nerd">🤓 Nerd</option>
+              <option value="gamer">🎮 Gamer</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large">Generate Plan</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Solo Mode Page -->
+    <div id="solo-mode" class="page hidden">
+      <div class="container">
+        <button class="btn-back" onclick="goToPage('home')">← Back</button>
+        <h2>Plan Your Solo Adventure</h2>
+        <form id="solo-form" class="form">
+          <div class="form-group">
+            <label for="solo-city">City</label>
+            <input type="text" id="solo-city" placeholder="e.g., New York, Paris, Tokyo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="solo-interests">Interests (Select at least 1)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="movies" />
+                🎬 Movies
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="gaming" />
+                🎮 Gaming
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="books" />
+                📚 Books
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="cafe hopping" />
+                ☕ Cafe Hopping
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="fitness" />
+                💪 Fitness
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="art" />
+                🎨 Art
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="music" />
+                🎵 Music
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interests" value="travel" />
+                ✈️ Travel
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="solo-mood">Mood</label>
+            <select id="solo-mood" required>
+              <option value="">Select your mood</option>
+              <option value="relaxed">😌 Relaxed</option>
+              <option value="energetic">⚡ Energetic</option>
+              <option value="social">👥 Social</option>
+              <option value="reflective">🧘 Reflective</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="solo-time">Preferred Time</label>
+            <select id="solo-time" required>
+              <option value="">Select preferred time</option>
+              <option value="morning">🌅 Morning</option>
+              <option value="evening">🌆 Evening</option>
+              <option value="night">🌙 Night</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="solo-budget">Budget ($)</label>
+            <input type="number" id="solo-budget" placeholder="e.g., 100" min="10" required />
+          </div>
+
+          <div class="form-group">
+            <label for="solo-personality">Your Personality Type</label>
+            <select id="solo-personality" required>
+              <option value="">Select your personality</option>
+              <option value="introvert">🤐 Introvert</option>
+              <option value="foodie">🍽️ Foodie</option>
+              <option value="filmy">🎬 Movie Buff</option>
+              <option value="nerd">🤓 Nerd</option>
+              <option value="gamer">🎮 Gamer</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large">Generate Plan</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page" class="page hidden">
+      <div class="container">
+        <button class="btn-back" onclick="goToPage('home')">← Back to Home</button>
+        <div id="results-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 PlanMyDate AI. Powered by OpenAI.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/api/client.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/resultDisplay.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/datePlannerPage.js"></script>
+  <script src="js/pages/soloModePage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
