@@ -18,7 +18,7 @@
     "express",
     "mongodb"
   ],
-  "author": "Your Name",
+  "author": "Subham Barman (https://subhambarman.in/)",
   "license": "MIT",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

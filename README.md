@@ -104,3 +104,10 @@ frontend/
 ```bash
 node backend/test-rate-limit.js
 ```
+
+---
+
+## Developer
+
+**Subham Barman**  
+Portfolio: [https://subhambarman.in/](https://subhambarman.in/)
